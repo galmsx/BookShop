@@ -1,0 +1,12 @@
+{
+  "port" : 3000,
+
+  "dbConf": {
+    "username": "root",
+    "password": "password",
+    "database": "newbase",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "secret" : "secret"
+}

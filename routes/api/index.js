@@ -1,0 +1,37 @@
+var isAdmin = require("./isAdmin");
+var booklist = require("./booklist");
+var login = require("./login");
+var register = require("./register");
+var authors = require("./authors");
+var delAuthor = require("./delauthor");
+var addAuthor = require("./addauthor");
+var genres = require('./genres');
+var delGenre = require('./delGenre');
+var addGenre = require('./addGenre');
+var addBook = require('./addBook');
+var delBook = require("./delBook");
+var getBook = require('./getBook');
+var addComments = require('./addComment');
+var isSigned = require('./isSigned');
+var delComment = require('./delComment');
+var downloadBook = require('./dowloadBook');
+
+module.exports = express => {
+  var router = express.Router();
+  router.get("/booklist", booklist);
+  router.get("/login", login);
+  router.get("/register", register);
+  router.get("/authors", authors);
+  router.get("/delauthor", isAdmin, delAuthor);
+  router.get("/addauthor", isAdmin, addAuthor);
+  router.get("/genres",genres);
+  router.get("/delgenre",isAdmin,delGenre);
+  router.get("/addgenre",isAdmin,addGenre);
+  router.post("/addbook",isAdmin,addBook);
+  router.get("/delbook",isAdmin,delBook);
+  router.get('/getbook',getBook);
+  router.post('/addcomment',isSigned,addComments);
+  router.get('/delcomment',isSigned,delComment);
+  router.get('/loadbook',isSigned,downloadBook);
+  return router;
+};
