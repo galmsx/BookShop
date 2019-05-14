@@ -640,3 +640,158 @@ main {
   width: 15%;
   height: 5rem;
 }
+.money-button{
+  position: relative;
+  margin: 2rem auto;
+  width : 30%;
+  background-color: #28a745;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: #a3cfe3;
+  padding-right: 6vw;
+}
+.but-to-money{
+  height : 3rem;
+  width: 6vw;
+  background-color: #3a6d99;
+  position: absolute;
+  right: 0;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.books-item-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.book-item{
+  position: relative;
+  height: 15rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  background-color: #a3cfe3;
+}
+.book-item img{
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  height: 14rem;
+  width: 9.33rem;
+}
+.book-item .options{
+  width: 10rem;
+  height: 15rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: top;
+}
+.options strong{
+  font-size: 1.4rem;
+}
+.options span{
+  font-size: 1.5rem;
+}
+.options a{
+  text-decoration: none;
+}
+.options .button{
+  cursor: pointer;
+  margin: 0;
+  width : 7.5rem;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  font-size: 1.3rem;
+}
+.book-item .delete-item{
+  position: absolute;
+  visibility: hidden;
+  top: 1rem;
+  text-align: center;
+  left : 1rem;
+  color: gray;
+  width: 9rem;
+  height: 9rem;
+  line-height: 9rem;
+  font-size: 9rem;
+  cursor: pointer;
+}
+.book-item:hover .delete-item{
+  visibility: visible;
+}
+
+.purchase{
+  position: relative;
+  margin: 3rem auto;
+  width: 60%;
+  height: 20rem;
+  background-color: #a3cfe3;
+}
+.purchase img{
+  display: inline-block;
+  margin: 1rem;
+  height: 18rem;
+  width: 12rem;
+}
+.purchase .p-inf{
+  display: inline-block;
+  vertical-align: top;
+  width: 33vw;
+}
+.p-inf h1{
+font-size: 2rem;
+text-align: center;
+color: #224b7a;
+margin: 1rem;
+}
+.button-section{
+  width: 33vw;
+  height: 9rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.purch-button{
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #34d058;
+  min-width: 10rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  line-height: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+}
+.rate{
+  background-color: #224b7a;
+  border-radius: 0;
+  cursor: default;
+}
+.purch-button input{
+  width: 5rem;
+}
+.money-form{
+  margin: 5rem auto;
+  width: 20rem;
+}
+.money-form-money{
+width: 10rem;
+}
+.money-form-submit{
+width: 10rem;
+background-color: #28a745;
+color: white;
+}

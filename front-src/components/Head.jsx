@@ -1,7 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import base64url from "base64url";
 
 function Head(props) {
+  var signed = localStorage.getItem("token");
+  var login = "Profile";
+  if (signed) {
+    signed = JSON.parse(base64url.decode(signed.split(".")[1]));
+    login = signed.login;
+  }
   return (
     <header>
       <Link to={"/"}>
@@ -32,7 +39,7 @@ function Head(props) {
       </nav>
       <Link to={"/profile"}>
         <i className="fas fa-shopping-basket" />
-        <span> Profile</span>
+        <span> {login}</span>
       </Link>
     </header>
   );

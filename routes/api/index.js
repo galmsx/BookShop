@@ -15,6 +15,7 @@ var addComments = require('./addComment');
 var isSigned = require('./isSigned');
 var delComment = require('./delComment');
 var downloadBook = require('./dowloadBook');
+var user = require('./user');
 
 module.exports = express => {
   var router = express.Router();
@@ -33,5 +34,6 @@ module.exports = express => {
   router.post('/addcomment',isSigned,addComments);
   router.get('/delcomment',isSigned,delComment);
   router.get('/loadbook',isSigned,downloadBook);
+  router.use('/user',user(express));
   return router;
 };

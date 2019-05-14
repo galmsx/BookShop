@@ -2,7 +2,7 @@ let db = require("../../models");
 var Op = db.Sequelize.Op;
 
 module.exports = (req, res) => {
-  var page = req.query.page;
+  var page = req.query.page || 1;
   var filter = req.query.filter || "";
   var genre = req.query.genre || "";
   if (genre == "all") genre = "";
